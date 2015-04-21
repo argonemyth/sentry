@@ -74,7 +74,8 @@ var jsDistros = {
   "vendor-misc": [
     vendorFile("moment/min/moment.min.js"),
     vendorFile("simple-slider/js/simple-slider.min.js"),
-    file("scripts/lib/select2/select2.js")
+    file("scripts/lib/select2/select2.js"),
+    file("scripts/lib/iframeResizer.contentWindow.min.js")
   ],
 
   "raven": [
