@@ -47,6 +47,7 @@ from .endpoints.team_groups_new import TeamGroupsNewEndpoint
 from .endpoints.team_groups_trending import TeamGroupsTrendingEndpoint
 from .endpoints.team_project_index import TeamProjectIndexEndpoint
 from .endpoints.team_stats import TeamStatsEndpoint
+from .endpoints.user_index import UserIndexEndpoint
 from .endpoints.user_details import UserDetailsEndpoint
 
 
@@ -64,6 +65,9 @@ urlpatterns = patterns(
         name='sentry-api-0-broadcast-index'),
 
     # Users
+    url(r'^users/$',
+        UserIndexEndpoint.as_view(),
+        name='sentry-api-0-user-index'),
     url(r'^users/(?P<user_id>[^\/]+)/$',
         UserDetailsEndpoint.as_view(),
         name='sentry-api-0-user-details'),
