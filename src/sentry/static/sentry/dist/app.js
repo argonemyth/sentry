@@ -63,7 +63,7 @@ app = window.app = {
                 '<ul class="actions">' +
                     '<% if (canResolve) { %>' +
                         '<li>' +
-                            '<a href="#" data-action="resolve">' +
+                            '<a href="#" data-action="resolve" title="Resolve">' +
                                 '<i aria-hidden="true" class="icon-checkmark"></i>' +
                             '</a>' +
                         '</li>' +
@@ -1423,15 +1423,6 @@ app = window.app = {
                     window.setTimeout(this.refreshStats, 1000);
                 }, this)
             });
-        }
-
-    });
-
-    app.AccessGroupMembersPage = BasePage.extend({
-        initialize: function(){
-            BasePage.prototype.initialize.apply(this, arguments);
-
-            app.utils.makeSearchableUsersInput('form input[name=user]');
         }
     });
 
